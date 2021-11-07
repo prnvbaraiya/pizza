@@ -28,7 +28,6 @@
                             <th scoper="col">S.Price</th>
                             <th scoper="col">M.Price</th>
                             <th scoper="col">L.Price</th>
-                            <th scoper="col">Catogery</th>
                             <th scoper="col"></th>
                             </tr>
                         </thead>
@@ -43,7 +42,6 @@
                                 <td>{{$pizza->small_pizza_price}}</td>
                                 <td>{{$pizza->medium_pizza_price}}</td>
                                 <td>{{$pizza->large_pizza_price}}</td>
-                                <td>{{$pizza->catogery}}</td>
                                 <td><a href="{{route('pizza.edit',$pizza->id)}}" ><button class="btn btn-primary">Edit</button></a></td>
                                 <td><button class="btn btn-danger" data-bs-toggle="modal"  data-bs-target="#exampleModal{{$pizza->id}}">Delete</button></td>
                                 
