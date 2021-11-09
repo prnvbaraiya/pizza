@@ -9,6 +9,7 @@
 
                 <div class="card-body">
                     <form action="{{route('frontpage')}}" method="get">
+                        <a href="/" class="list-group-item list-group-item-action">Back</a>
                         <input type="submit" name="category" value="Vegitarian" class="list-group-item list-group-item-action">
                         <input type="submit" name="category" value="NonVegitarian" class="list-group-item list-group-item-action">
                         <input type="submit" name="category" value="Traditional" class="list-group-item list-group-item-action">
@@ -21,7 +22,7 @@
 
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Pizza</div>
+                <div class="card-header">Pizza({{count($pizzas)}})</div>
 
                 <div class="card-body">
                     <div class="row">
@@ -51,10 +52,7 @@
     a.list-group-item{
         font-size: 18px;
     }
-    a.list-group-item:hover{
-        background-color: red;
-        color: white;
-    }
+
     .card-header{
         background-color: red;
         color: white;

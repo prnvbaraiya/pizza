@@ -36,4 +36,6 @@ Route::delete('/pizza/{id}/delete', [App\Http\Controllers\PizzaController::class
 Route::get('/user/order', [App\Http\Controllers\UserOrderController::class, 'index'])->name('user.order');
 Route::post('/order/{id}/status', [App\Http\Controllers\UserOrderController::class, 'changeStatus'])->name('order.changeStatus');
 
+Route::get('/customers', [App\Http\Controllers\UserOrderController::class, 'customers'])->name('customers');
+
 }); 
