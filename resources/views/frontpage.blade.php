@@ -8,11 +8,12 @@
                 <div class="card-header">Menu</div>
 
                 <div class="card-body">
-                    <ul class="list-group">
-                        <a href="" class="list-group-item list-group-item-action">Cat 1</a>
-                        <a href="" class="list-group-item list-group-item-action">Cat 2</a>
-                        <a href="" class="list-group-item list-group-item-action">Cat 3</a>
-                    </ul>
+                    <form action="{{route('frontpage')}}" method="get">
+                        <input type="submit" name="category" value="Vegitarian" class="list-group-item list-group-item-action">
+                        <input type="submit" name="category" value="NonVegitarian" class="list-group-item list-group-item-action">
+                        <input type="submit" name="category" value="Traditional" class="list-group-item list-group-item-action">
+
+                    </form>
                     
                 </div>
             </div>
@@ -26,10 +27,10 @@
                     <div class="row">
                         @forelse($pizzas as $pizza)
                         <div class="col-md-4 mt-2 text-center" style="border: 1px solid white;">
-                            <img src="{{Storage::url($pizza->image)}}" class="img-thumbnail" style="width: 100%;"></img>
+                            <img src="{{Storage::url($pizza->image)}}" alt="{{$pizza->name}}-image"class="img-thumbnail" style="width: 100%;"></img>
                             <p>{{$pizza->name}}</p>
                             <p>{{$pizza->description}}</p>
-                            <a href="">
+                            <a href="{{route('pizza.show',$pizza->id)}}">
                                 <button class="btn btn-danger">Order Now</button>
                             </a>    
                         </div>
